@@ -1,0 +1,204 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	background: #222;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	overflow-y: scroll;
+}
+
+body *::selection {
+	background: #991111;
+}
+
+
+section#navigation {
+	display: block;
+	background: #000;
+	margin: 0 0 0 0;
+}
+
+#navigation ul {
+	margin: 0;
+	padding: 2em 20% 0 20%;
+	text-align: right;
+}
+
+#navigation li {
+	display: inline-block;
+	padding: 0 0 0.5em 0.25em;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#navigation a {
+	padding: 0.5em;
+	color: #fff;
+	text-decoration: none;
+}
+
+#navigation a:hover {
+	text-decoration: underline;
+}
+
+section#headline {
+	margin: 0;
+	padding: 1em 20%;
+	color: #fff;
+ 	background: #ff2222; /* Old browsers */
+	background-image: -moz-linear-gradient(top, #ff2222 0%, #ff3333 49%, #ff1111 50%, #ff2222 100%); /* FF3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff2222), color-stop(49%,#ff3333), color-stop(50%,#ff1111), color-stop(100%,#ff2222)); /* Chrome,Safari4+ */
+	background-image: -webkit-linear-gradient(top, #ff2222 0%,#ff3333 49%,#ff1111 50%,#ff2222 100%); /* Chrome10+,Safari5.1+ */
+	background-image: -o-linear-gradient(top, #ff2222 0%,#ff3333 49%,#ff1111 50%,#ff2222 100%); /* Opera 11.10+ */
+	background-image: -ms-linear-gradient(top, #ff2222 0%,#ff3333 49%,#ff1111 50%,#ff2222 100%); /* IE10+ */
+	background-image: linear-gradient(to bottom, #ff2222 0%,#ff3333 49%,#ff1111 50%,#ff2222 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2222', endColorstr='#ff2222',GradientType=0 ); /* IE6-9 */
+}
+
+#headline h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 3em;
+}
+
+#headline h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+}
+
+
+section#articles {
+	display: block;
+	position: relative;
+	margin: 3em 20% 0 20%;
+	height: 300px;
+	overflow: hidden;
+	border: 3px solid #fff;
+	border-radius: 10px;
+}
+
+#articles article {
+	display: block;
+	position: absolute;
+	margin: 0;
+	padding: 3%;
+	width: 94%;
+	height: 300px;
+	background: #222;
+	border-radius: 10px;
+	-webkit-transform: translate(100%, 0);
+	-webkit-transition: all 500ms ease-out;
+}
+
+#articles article.visited {
+	-webkit-transform: translate(-100%, 0);
+	-webkit-transition: all 500ms ease-out;
+}
+
+#articles article.active {
+	background: #222;
+	-webkit-transform: translate(0, 0);
+	-webkit-transition: all 500ms ease-out;
+}
+
+#articles article h3 {
+	margin: 0;
+	font-size: 2em;
+}
+
+#articles article p {
+	font-size: 1.25em;
+}
+
+#articles article a {
+	color: #ff2222;
+	text-decoration: none;
+}
+
+#articles article a:hover,
+#articles article a:focus {
+	color: #ffcc44;
+}
+
+section#teaser-navi {
+	margin: 1em 20% 0 20%;
+	text-align: center;
+}
+
+a.fancybutton,
+div.fancybutton {
+	display: inline-block;
+	color: #fff;
+	line-height: 1em;
+	border: 2px solid #222;
+	border-radius: 10px;
+	cursor: pointer;
+
+	background: #ff2222; /* Old browsers */
+	background-image: -moz-linear-gradient(top, #ff2222 0%, #ff4444 49%, #ff1111 50%, #ff2222 100%); /* FF3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff2222), color-stop(49%,#ff4444), color-stop(50%,#ff1111), color-stop(100%,#ff2222)); /* Chrome,Safari4+ */
+	background-image: -webkit-linear-gradient(top, #ff2222 0%,#ff4444 49%,#ff1111 50%,#ff2222 100%); /* Chrome10+,Safari5.1+ */
+	background-image: -o-linear-gradient(top, #ff2222 0%,#ff4444 49%,#ff1111 50%,#ff2222 100%); /* Opera 11.10+ */
+	background-image: -ms-linear-gradient(top, #ff2222 0%,#ff4444 49%,#ff1111 50%,#ff2222 100%); /* IE10+ */
+	background-image: linear-gradient(to bottom, #ff2222 0%,#ff4444 49%,#ff1111 50%,#ff2222 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2222', endColorstr='#ff2222',GradientType=0 ); /* IE6-9 */
+
+	-webkit-transition: all 500ms ease-out;   
+}
+
+a.fancybutton::selection,
+div.fancybutton::selection {
+	background: transparent;
+}
+
+a.fancybutton:hover,
+div.fancybutton:hover {
+	color: #fff;
+	border: 2px solid #fff;
+	-webkit-transition: all 500ms ease-out;
+}
+
+
+#teaser-navi div {
+	margin: 0 0.5em;
+	padding: 0em 1em;
+	font-size: 3em;
+}
+
+/* This is apparently a fix for browser misbehaviour */
+#teaser-navi::selection {
+	background: transparent;
+}
+
+section#links {
+	margin: 3em 20%;
+	padding: 0.5em 0 0 0;
+	border-top: 1px solid #999;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+#links a {
+	margin: 0 0.25em;
+	padding: 0.25em 1em;
+	text-decoration: none;
+}
+
+footer {
+	position: fixed;
+	top: auto;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	padding: 0.5em;
+	background: #000;
+	text-align: center;
+}
+
+footer a {
+	color: #fff;
+}
+

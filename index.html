@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+	<title>lycheeJS - JavaScript Game Engine</title>
+	<link rel="stylesheet" href="asset/css/about.css">
+</head>
+<body>
+	<section id="navigation">
+		<ul>
+			<li><a class="active" href="./">About</a></li>
+			<li><a href="docs/">Docs</a></li>
+			<li><a href="tools/">Tools</a></li>
+			<li><a href="blog/">Blog</a></li>
+			<li>|</li>
+			<li><a href="https://github.com/martensms/lycheeJS">lycheeJS</a></li>
+			<li><a href="https://github.com/martensms/lycheeJS-adk">lycheeJS-ADK</a></li>
+		</ul>
+	</section>
+
+	<section id="headline">
+		<h1>lycheeJS</h1>
+		<h2>
+			The first professional-grade cross-Browser and
+			cross-Platform JavaScript game engine.
+		</h2>
+	</section>
+
+	<section id="articles">
+
+		<article id="every-browser" class="active">
+
+			<h3>Play in every Browser</h3>
+			<p>
+				The <a href="https://github.com/martensms/lycheeJS">lycheeJS game engine</a>
+				runs in all modern Browsers, such as Firefox, Chrome, Opera, Safari and
+				Internet Explorer!
+			</p>
+			<p>
+				Even all major Mobile Browsers are supported, including WebKit on
+				Android, Chrome on Android and Mobile Safari on iPod Touch, iPhone
+				and iPad.
+			</p>
+			<p>
+				Read the <a href="docs/compatibility-table.html">compatibility table</a>
+				for further details.
+			</p>
+
+		</article>
+
+		<article id="every-platform">
+
+			<h3>Play on every Platform</h3>
+
+			<p>
+				The <a href="https://github.com/martensms/lycheeJS-adk">lycheeJS-adk (App Development Kit)</a>
+				includes a custom V8-based JIT runtime with OpenGL, GLU and GLUT integration
+				and custom data types for interaction.
+			</p>
+			<p>
+				Using the lycheeJS-adk, you are able to create native, executable builds
+				for Windows, Windows&nbsp;Metro, Linux, Android&nbsp;2.3, Android&nbsp;4.x,
+				iOS&nbsp;5.0+ and even for Mac&nbsp;OSX!
+			</p>
+
+		</article>
+
+		<article id="publish-games">
+
+			<h3>Publish your Games on Facebook, the AppStore, Google Play Store and Steam</h3>
+
+			<p>
+				The <a href="https://github.com/martensms/lycheeJS-adk">lycheeJS-adk</a>
+				automatically creates prebuild packages for Third-Party distribution systems
+				like Debian packages, Facebook, the AppStore, the Google Play Store or Steam.
+			</p>
+			<p>
+				So you, as a developer, only need to upload your game amd enter the details
+				for the distribution system afterwards.
+			</p>
+
+		</article>
+
+		<article id="game-boilerplate">
+
+			<h3>Game Boilerplate</h3>
+
+			<p>
+				You can get started within minutes using the
+				<a href="https://github.com/martensms/lycheeJS/tree/master/game/boilerplate/">Game Boilerplate</a>,
+				showing you best practices in writing real cross-platform compatible games.
+			</p>
+			<p>
+				Read the Getting Started Guide or the Tutorials in the documentation that
+				explain step-by-step how to build a game using the lycheeJS game engine and
+				show you how to use the advantages of rapid development inside the Web Browser.
+			</p>
+
+		</article>
+
+		<article id="anything-2d-anything-3d">
+
+			<h3>Anything 2D, Anything 3D</h3>
+
+			<p>
+				As the lycheeJS game engine is completely independent of the JavaScript runtime,
+				you are able to use it in any environment. You can even create Games using WebGL
+				in the Web Browser or using native OpenGL (SL / ES 2.0) within the V8 JIT runtime.
+			</p>
+			<p>
+				This allows you to create stunning 3D games for modern Web Browsers, native Games
+				on Desktop environments and even for Android devices!
+			</p>
+
+		</article>
+
+		<article id="open-source">
+
+			<h3>Open Source Philosophy</h3>
+
+			<p>
+				Everything in the lycheeJS library is Open Source.<br>
+				Even this Website and the documentation is hosted on github!
+			</p>
+			<p>
+				If you don't believe it, here are the links:
+			</p>
+
+			<ul>
+				<li><a href="https://github.com/martensms/lycheeJS">lycheeJS</a></li>
+				<li><a href="https://github.com/martensms/lycheeJS-adk">lycheeJS-ADK</a></li>
+				<li><a href="https://github.com/martensms/lycheeJS-docs">lycheeJS-Docs</a></li>
+			</ul>
+			<p>
+				Of course, you are invited to grab the code and to contribute!
+			</p>
+
+		</article>
+
+	</section>
+
+	<section id="teaser-navi">
+		<div class="fancybutton" id="teaser-previous">&lt;</div>
+		<div class="fancybutton" id="teaser-next">&gt;</div>
+	</section>
+
+	<section id="links">
+
+		<p>Now, what are you waiting for?</p>
+
+		<a class="fancybutton" href="https://github.com/martensms/lycheeJS/zipball/master">Download (v0.5)</a>
+		<a class="fancybutton" href="docs/getting-started.html">Get Started</a>
+	</section>
+
+	<footer>
+		&copy; 2012 by Christoph Martens (<a href="http://twitter.com/martensms">Twitter</a>) | 
+		lycheeJS is released under MIT license. lycheeJS-adk (public beta) is dual licensed GPL and lycheeJS-ADK-EULA.<br>
+	</footer>
+
+	<script src="source/Teaser.js"></script>
+	<script>
+		(function(global) {
+
+			var teaser = new app.Teaser(document.getElementById('articles'));
+
+			if (global.location.hash.match(/!/)) {
+
+				var active = global.location.hash.split('!')[1];
+				var element = document.getElementById(active);
+
+				if (element) {
+					teaser.reset(element);
+				}
+
+			}
+
+
+			var next = document.getElementById('teaser-next');
+			next.onclick = function() {
+				teaser.next();
+			};
+
+			var previous = document.getElementById('teaser-previous');
+			previous.onclick = function() {
+				teaser.previous();
+			};
+
+		})(this);
+	</script>
+
+</body>
