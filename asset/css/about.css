@@ -89,17 +89,29 @@ section#articles {
 	height: 300px;
 	background: #222;
 	border-radius: 10px;
+	transform: translate(100%, 0);
+	transition: all 500ms ease-out;
+	-moz-transform: translate(100%, 0);
+	-moz-transition: all 500ms ease-out;
 	-webkit-transform: translate(100%, 0);
 	-webkit-transition: all 500ms ease-out;
 }
 
 #articles article.visited {
+	transform: translate(-100%, 0);
+	transition: all 500ms ease-out;
+	-moz-transform: translate(-100%, 0);
+	-moz-transition: all 500ms ease-out;
 	-webkit-transform: translate(-100%, 0);
 	-webkit-transition: all 500ms ease-out;
 }
 
 #articles article.active {
 	background: #222;
+	transform: translate(0, 0);
+	transition: all 500ms ease-out;
+	-moz-transform: translate(0, 0);
+	-moz-transition: all 500ms ease-out;
 	-webkit-transform: translate(0, 0);
 	-webkit-transition: all 500ms ease-out;
 }
@@ -116,11 +128,19 @@ section#articles {
 #articles article a {
 	color: #ff2222;
 	text-decoration: none;
+	transition: all 500ms ease-out;   
+	-ms-transition: all 500ms ease-out;   
+	-moz-transition: all 500ms ease-out;   
+	-webkit-transition: all 500ms ease-out;
 }
 
 #articles article a:hover,
 #articles article a:focus {
 	color: #ffcc44;
+	transition: all 500ms ease-out;   
+	-ms-transition: all 500ms ease-out;   
+	-moz-transition: all 500ms ease-out;   
+	-webkit-transition: all 500ms ease-out;
 }
 
 section#teaser-navi {
@@ -146,6 +166,9 @@ div.fancybutton {
 	background-image: linear-gradient(to bottom, #ff2222 0%,#ff4444 49%,#ff1111 50%,#ff2222 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2222', endColorstr='#ff2222',GradientType=0 ); /* IE6-9 */
 
+	transition: all 500ms ease-out;   
+	-ms-transition: all 500ms ease-out;   
+	-moz-transition: all 500ms ease-out;   
 	-webkit-transition: all 500ms ease-out;   
 }
 
@@ -158,6 +181,9 @@ a.fancybutton:hover,
 div.fancybutton:hover {
 	color: #fff;
 	border: 2px solid #fff;
+	transition: all 500ms ease-out;
+	-ms-transition: all 500ms ease-out;
+	-moz-transition: all 500ms ease-out;
 	-webkit-transition: all 500ms ease-out;
 }
 
